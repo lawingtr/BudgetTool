@@ -6,16 +6,24 @@
         xmlns:local="clr-namespace:BudgetTool"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-   <Grid>
+   <Grid Name="grid_Main">
       <Grid.ColumnDefinitions>
          <ColumnDefinition Width="*"/>
          <ColumnDefinition Width="*"/>
-         <ColumnDefinition Width="*"/>
-         <ColumnDefinition Width="*"/>
       </Grid.ColumnDefinitions>
-      <Grid.RowDefinitions>
-         <RowDefinition Height="*"/>
-         <RowDefinition Height="*"/>
-      </Grid.RowDefinitions>
+
+      <Grid Name="grid_Left">
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+         </Grid.RowDefinitions>
+
+         <Label Name="label_Title" Grid.Row="0" Content="Budget Tool" FontFamily="Cooper Black" FontSize="30"/>
+         <Button Name="button_UploadBudget" Grid.Row="1" Style="{StaticResource StandardButtonStyle}"/>
+         <Button Name="button_CreateBudget" Grid.Row="2"/>
+         <Button Name="button_LogExpenses" Grid.Row="3"/>
+      </Grid>
    </Grid>
 </Window>
